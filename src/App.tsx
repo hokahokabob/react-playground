@@ -7,7 +7,7 @@ import YuGiOhCardsContainer, { YuGiOhCard } from "./YuGiOhCards";
 // const url =
 //   "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician";
 const url =
-  "https://db.ygoprodeck.com/api/v7/cardinfo.php?&sort=name&type=Normal%20Monster&race=Dragon,Spellcaster";
+  "https://db.ygoprodeck.com/api/v7/cardinfo.php?&sort=name&type=Normal%20Monster";
 
 export default function App() {
   const cardsPromise: Promise<YuGiOhCard[]> = fetchCards(url);
