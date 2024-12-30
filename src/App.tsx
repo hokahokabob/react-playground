@@ -1,35 +1,19 @@
-import { useState } from "react";
+import { Suspense } from "react";
 import "./App.css";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { fetchCards } from "./web-api";
+import YuGiOhCardsContainer, { YuGiOhCard } from "./YuGiOhCards";
 
-function App() {
-  const [count, setCount] = useState(0);
+// const url =
+//   "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician";
+const url =
+  "https://db.ygoprodeck.com/api/v7/cardinfo.php?&sort=name&type=Normal%20Monster&race=Dragon,Spellcaster";
+
+export default function App() {
+  const cardsPromiseData: Promise<YuGiOhCard[]> = fetchCards(url);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <YuGiOhCardsContainer cardsPromise={cardsPromiseData} />
+    </Suspense>
   );
 }
-
-export default App;
