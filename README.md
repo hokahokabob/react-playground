@@ -1,5 +1,5 @@
 # Overview
-- Yu-Gi-Oh! is world-famous trading card game.
+- Yu-Gi-Oh! is a world-famous trading card game.
 - This small application enables you to draw a normal monster card from the deck.
 - Written by React 19 with Vite as of now @2024.12
 
