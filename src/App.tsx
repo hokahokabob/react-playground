@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import "./App.css";
-import "./output.css";
+import "./tailwind-output.css";
 import { fetchCards } from "./web-api";
 import YuGiOhCardsContainer, { YuGiOhCard } from "./YuGiOhCards";
 
