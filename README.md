@@ -1,3 +1,13 @@
+# Overview
+- Yu-Gi-Oh! is world-famous trading card game.
+- This small application enables you to draw a normal monster card from the deck.
+- Written by React 19 with Vite as of now @2024.12
+
+![image](https://github.com/user-attachments/assets/8c82fbaf-add8-4ead-8393-7d5d6ce815f9)
+
+<details>
+<summary>bk: original readme content</summary><div>
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -48,3 +58,8 @@ export default tseslint.config({
   },
 })
 ```
+  
+</div>  
+</details>
+
+
