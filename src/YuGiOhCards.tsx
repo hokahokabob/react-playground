@@ -26,6 +26,8 @@ type DeckCondition = {
   shouldStopDrawing: boolean;
 };
 
+const DEFAULT_DECK_BALANCE = 15;
+
 function randomIndex(deckSize: number): number {
   return Math.floor(Math.random() * deckSize);
 }
@@ -68,11 +70,10 @@ function YuGiOhCards({
 }) {
   const cards: YuGiOhCard[] = use(cardsPromise);
   const deckSize = cards.length;
-  const defaultDeckBalance = 15;
   const [deckConditionState, formAction] = useActionState(drawCard, {
     cardIndex: randomIndex(deckSize),
     deckSize,
-    deckBalance: defaultDeckBalance,
+    deckBalance: DEFAULT_DECK_BALANCE,
     shouldStopDrawing: false,
   });
 
