@@ -110,7 +110,15 @@ function YuGiOhCards({
               .filter((_card, index) => index === deckConditionState.cardIndex)
               .map((card) => (
                 <tr key={card.id} className="hover:bg-gray-100">
-                  <td className="py-2 px-4 border-b font-mono">{card.id}</td>
+                  <td className="py-2 px-4 border-b font-mono">
+                    <a
+                      href={`https://yugipedia.com/wiki/${card.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {card.id}
+                    </a>
+                  </td>
                   <td className="py-2 px-4 border-b font-mono font-semibold">
                     {card.name}
                   </td>
