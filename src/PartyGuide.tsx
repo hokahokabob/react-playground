@@ -48,7 +48,7 @@ export default function PartyGuide() {
                         return (
                             <div
                                 key={index}
-                                className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg flex flex-col md:flex-row items-center"
+                                className="dark:bg-gray-800 overflow-hidden shadow rounded-lg flex flex-col md:flex-row items-center"
                             >
                                 <div className="relative flex-shrink-0 overflow-hidden mx-auto mt-4 w-full" style={{ maxWidth: '400px', aspectRatio: '4/3' }}>
                                     {/* Images are in public/image-X.png. 
@@ -59,7 +59,7 @@ export default function PartyGuide() {
                                         className="absolute inset-0 w-full h-full object-cover object-center"
                                     />
                                 </div>
-                                <div className="p-6 my-4 mx-auto w-full dark:bg-gray-800" style={{ maxWidth: '400px' }}>
+                                <div className="p-6 my-4 mx-auto w-full dark:text-gray-200" style={{ maxWidth: '400px' }}>
                                     {/* <div className="flex items-center mb-4">
                                         <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-indigo-600 text-white rounded-full font-bold">
                                             {stepNum}
@@ -68,7 +68,7 @@ export default function PartyGuide() {
                                             Step {stepNum}
                                         </h2>
                                     </div> */}
-                                    <p className="text-gray-600 dark:text-gray-200 text-lg whitespace-pre-wrap">
+                                    <p className="text-gray-600 dark:text-gray-400 text-lg whitespace-pre-wrap">
                                         {guideTexts[stepNum] || "Loading instructions..."}
                                     </p>
                                 </div>
