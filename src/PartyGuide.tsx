@@ -37,7 +37,7 @@ export default function PartyGuide() {
 
     return (
         <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
+            <div className="mx-auto">
                 <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
                     Party Location Guide
                 </h1>
@@ -50,7 +50,7 @@ export default function PartyGuide() {
                                 key={index}
                                 className="bg-white overflow-hidden shadow rounded-lg flex flex-col md:flex-row items-center"
                             >
-                                <div className="relative flex-shrink-0 overflow-hidden mx-auto mt-4" style={{ width: '400px', height: '300px' }}>
+                                <div className="relative flex-shrink-0 overflow-hidden mx-auto mt-4 w-full" style={{ maxWidth: '400px', aspectRatio: '4/3' }}>
                                     {/* Images are in public/image-X.png. 
                          Note: public/ assets are served at root path / */}
                                     <img
@@ -59,7 +59,7 @@ export default function PartyGuide() {
                                         className="absolute inset-0 w-full h-full object-cover object-center"
                                     />
                                 </div>
-                                <div className="p-6 my-4 mx-auto" style={{ maxWidth: '400px' }}>
+                                <div className="p-6 my-4 mx-auto w-full" style={{ maxWidth: '400px' }}>
                                     {/* <div className="flex items-center mb-4">
                                         <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-indigo-600 text-white rounded-full font-bold">
                                             {stepNum}
